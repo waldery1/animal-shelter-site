@@ -1,0 +1,221 @@
+/* Настройки цветовых схем */
+[data-theme="light"]{
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --text-main: #2b2b2b;
+    --text-muted: #6c757d;
+    --accent-color: #e63946;
+    --header-bg: #ffffff;
+    --border-color: #dee2e6;
+}
+
+[data-theme="dark"] {
+    --bg-primary: #121212;
+    --bg-secondary: #1e1e1e;
+    --text-main: #f5f5f5;
+    --text-muted: #a0a0a0;
+    --accent-color: #ff4d5a;
+    --header-bg: #1e1e1e;
+    --border-color: #333333;
+}
+
+/* Сброс базовых стилей */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Стили шапки сайта */
+.header {
+    background-color: var(--header-bg);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo-link {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.header__menu {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.header__menu-link {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.header__menu-link:hover {
+    color: var(--accent-color);
+}
+
+.header__menu-link--active {
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.header__theme-toggle {
+    background: none;
+    border: 1px solid var(--border-color);
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 1rem;
+    background-color: var(--bg-secondary);
+    transition: transform 0.2s ease;
+}
+
+.header__theme-toggle:hover {
+    transform: scale(1.05);
+}
+
+/* Секция главного баннера */
+.hero {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    background: radial-gradient(circle at top right, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+}
+
+.hero__container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero__title {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.hero__subtitle {
+    color: var(--text-muted);
+    font-size: 1.25rem;
+    margin-bottom: 35px;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero__actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Кнопки призыва к действию */
+.hero__btn {
+    display: inline-block;
+    padding: 14px 28px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    border: 2px solid transparent;
+}
+
+.hero__btn--primary {
+    background-color: var(--accent-color);
+    color: #ffffff;
+}
+
+.hero__btn--primary:hover {
+    background-color: var(--text-main);
+    color: var(--bg-primary);
+}
+
+.hero__btn--secondary {
+    background-color: transparent;
+    border-color: var(--border-color);
+    color: var(--text-main);
+}
+
+.hero__btn--secondary:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+/* Стили подвала сайта */
+.footer {
+    background-color: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    width: 100%;
+}
+
+.footer__student {
+    margin-top: 5px;
+    font-style: italic;
+}
+
+/* Адаптивные стили для мобильных экранов */
+@media (max-width: 576px) {
+    .header__container {
+        padding: 10px 15px;
+    }
+
+    .header__menu {
+        gap: 15px;
+    }
+
+    .header__logo-link {
+        font-size: 1.1rem;
+    }
+
+    .hero__title {
+        font-size: 2rem;
+    }
+
+    .hero__subtitle {
+        font-size: 1.05rem;
+    }
+
+    .hero__actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero__btn {
+        width: 100%;
+    }
+}
