@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог питомцев — «Доброе сердце»</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Шапка сайта  -->
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <a href="index.html" class="header__logo-link">❤️ Доброе Сердце</a>
+            </div>
+            <nav class="header__nav">
+                <ul class="header__menu">
+                    <li class="header__menu-item"><a href="index.html" class="header__menu-link">Главная</a></li>
+                    <li class="header__menu-item"><a href="catalog.html" class="header__menu-link header__menu-link--active">Каталог</a></li>
+                    <li class="header__menu-item"><a href="help.html" class="header__menu-link">Как помочь</a></li>
+                    <li class="header__menu-item"><a href="contacts.html" class="header__menu-link">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header__actions">
+                <button class="header__theme-toggle" id="theme-btn" aria-label="Переключить тему">🌙</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент каталога -->
+    <main class="catalog-section">
+        <div class="catalog-section__container">
+            <h1 class="catalog-section__title">Наши подопечные</h1>
+            <p class="catalog-section__subtitle">Каждый из них мечтает обрести любящий дом и верного друга</p>
+            
+            <!-- Панель кнопок для будущей фильтрации на JS -->
+            <div class="filter-controls">
+                <button class="filter-controls__btn filter-controls__btn--active" data-filter="all">Все друзья</button>
+                <button class="filter-controls__btn" data-filter="cat">Кошки</button>
+                <button class="filter-controls__btn" data-filter="dog">Собаки</button>
+            </div>
+
+            <!-- Сетка с карточками питомцев -->
+            <div class="catalog-grid">
+                <!-- Карточка 1 -->
+                <article class="pet-card" data-type="cat">
+                    <div class="pet-card__photo-box">
+                        <img src="img/cat1.jpg" alt="Кот Барсик" class="pet-card__image">
+                    </div>
+                    <div class="pet-card__details">
+                        <h3 class="pet-card__title">Барсик</h3>
+                        <span class="pet-card__type-tag">Кот, 1.5 года</span>
+                        <p class="pet-card__text">Очень спокойный и мурчащий котик. Любит сидеть на ручках и спать на мягкой подушке.</p>
+                    </div>
+                </article>
+
+                <!-- Карточка 2 -->
+                <article class="pet-card" data-type="dog">
+                    <div class="pet-card__photo-box">
+                        <img src="img/dog1.jpg" alt="Пес Джек" class="pet-card__image">
+                    </div>
+                    <div class="pet-card__details">
+                        <h3 class="pet-card__title">Джек</h3>
+                        <span class="pet-card__type-tag">Собака, 2 года</span>
+                        <p class="pet-card__text">Энергичный, знает команды «сидеть» и «дай лапу». Идеальный компаньон для прогулок.</p>
+                    </div>
+                </article>
+
+                <!-- Карточка 3 -->
+                <article class="pet-card" data-type="cat">
+                    <div class="pet-card__photo-box">
+                        <img src="img/cat2.jpg" alt="Кошка Сима" class="pet-card__image">
+                    </div>
+                    <div class="pet-card__details">
+                        <h3 class="pet-card__title">Сима</h3>
+                        <span class="pet-card__type-tag">Кошка, 6 месяцев</span>
+                        <p class="pet-card__text">Маленькая трехцветная кошечка. Принесет в ваш дом удачу, счастье и много веселья.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__copy">© 2026 Приют «Доброе сердце». Итоговый проект по Веб-технологиям.</p>
+            <p class="footer__student">Выполнила: Болденкова Анна, гр. 02171-ДБ</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

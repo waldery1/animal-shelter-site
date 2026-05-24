@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты — Приют «Доброе сердце»</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <a href="index.html" class="header__logo-link">❤️ Доброе Сердце</a>
+            </div>
+            <nav class="header__nav">
+                <ul class="header__menu">
+                    <li class="header__menu-item"><a href="index.html" class="header__menu-link">Главная</a></li>
+                    <li class="header__menu-item"><a href="catalog.html" class="header__menu-link">Каталог</a></li>
+                    <li class="header__menu-item"><a href="help.html" class="header__menu-link">Как помочь</a></li>
+                    <li class="header__menu-item"><a href="contacts.html" class="header__menu-link header__menu-link--active">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header__actions">
+                <button class="header__theme-toggle" id="theme-btn" aria-label="Переключить тему">🌙</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Раздел контактов -->
+    <main class="contacts-section">
+        <div class="contacts-section__container">
+            <h1 class="contacts-section__title">Наши контакты</h1>
+            <p class="contacts-section__subtitle">Свяжитесь с нами, чтобы приехать в гости или задать любой вопрос</p>
+
+            <div class="contacts-grid">
+                <!-- Инфо -->
+                <div class="contacts-info">
+                    <h2 class="contacts-info__title">Контактная информация</h2>
+                    <p class="contacts-info__text"><strong>Адрес:</strong> г. Иркутск, ул. Лесная, д. 25</p>
+                    <p class="contacts-info__text"><strong>Телефон:</strong> +7 (999) 123-45-67</p>
+                    <p class="contacts-info__text"><strong>Email:</strong> info@goodheart-shelter.ru</p>
+                    <p class="contacts-info__text"><strong>Часы работы:</strong> Ежедневно с 10:00 до 18:00</p>
+                    
+                    <!-- Панель заявок (пока скрыта, для JS в будущем) -->
+                    <div class="applications-panel" id="apps-box" style="display: none;">
+                        <h3 class="applications-panel__title">Ваши заявки на посещение</h3>
+                        <ul class="applications-panel__list" id="apps-list"></ul>
+                    </div>
+                </div>
+
+                <!-- Форма бронирования -->
+                <form class="booking-form" id="visit-form">
+                    <h2 class="booking-form__title">Запись на посещение</h2>
+                    <p class="booking-form__subtitle">Заполните форму, чтобы забронировать время визита</p>
+                    
+                    <div class="booking-form__field">
+                        <label for="user-name" class="booking-form__label">Ваше имя</label>
+                        <input type="text" id="user-name" class="booking-form__input" placeholder="Иван" required>
+                    </div>
+
+                    <div class="booking-form__field">
+                        <label for="user-phone" class="booking-form__label">Телефон</label>
+                        <input type="tel" id="user-phone" class="booking-form__input" placeholder="+7 (999) 000-00-00" required>
+                    </div>
+
+                    <div class="booking-form__field">
+                        <label for="visit-date" class="booking-form__label">Дата визита</label>
+                        <input type="date" id="visit-date" class="booking-form__input" required>
+                    </div>
+
+                    <button type="submit" class="booking-form__btn">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__copy">© 2026 Приют «Доброе сердце». Итоговый проект по Веб-технологиям.</p>
+            <p class="footer__student">Выполнила: Болденкова Анна, гр. 02171-ДБ</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
