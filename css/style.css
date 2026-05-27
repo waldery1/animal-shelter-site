@@ -570,3 +570,49 @@ body {
 .booking-form__btn:hover {
     background-color: var(--text-main);
 }
+
+/* Блок асинхронного JS-приложения (Интересные факты) */
+.pet-fact {
+    margin-top: 40px;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.pet-fact__title {
+    font-size: 1.15rem;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.pet-fact__text {
+    font-size: 0.95rem;
+    color: var(--text-main);
+    margin-bottom: 15px;
+    font-style: italic;
+    min-height: 45px;
+}
+
+.pet-fact__btn {
+    background-color: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 6px 16px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.pet-fact__btn:hover {
+    background-color: var(--accent-color);
+    color: #ffffff;
+}
