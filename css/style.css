@@ -346,13 +346,44 @@ body {
     color: var(--text-muted);
 }
 
-/* Адаптивные правки для мобильных кнопок */
-@media (max-width: 480px) {
-    .filter-controls {
+/* Адаптивные стили для мобильных экранов */
+@media (max-width: 576px) {
+    .header__container {
+        padding: 10px 15px;
         flex-direction: column;
-        gap: 10px;
+        gap: 12px;
     }
-    .filter-controls__btn {
+
+    .header__menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 15px;
+        padding: 0;
+    }
+
+    .header__menu-link {
+        font-size: 0.95rem; 
+    }
+
+    .header__logo-link {
+        font-size: 1.2rem;
+    }
+
+    .hero__title {
+        font-size: 2rem;
+    }
+
+    .hero__subtitle {
+        font-size: 1.05rem;
+    }
+
+    .hero__actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero__btn {
         width: 100%;
     }
 }
@@ -615,4 +646,84 @@ body {
 .pet-fact__btn:hover {
     background-color: var(--accent-color);
     color: #ffffff;
+}
+
+/* Стили для страницы О приюте */
+.about-section {
+    flex: 1;
+    padding: 50px 20px;
+    background-color: var(--bg-primary);
+}
+
+.about-section__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-section__title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.about-section__subtitle {
+    color: var(--text-muted);
+    margin-bottom: 40px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    text-align: left;
+}
+
+.about-card {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 30px;
+    transition: box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+}
+
+.about-card__title {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.about-card__text {
+    color: var(--text-main);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.about-card__list {
+    list-style-position: inside;
+    margin-top: 15px;
+    color: var(--text-main);
+}
+
+.about-card__item {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.about-card__item::marker {
+    color: var(--accent-color);
+}
+
+.pet-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
